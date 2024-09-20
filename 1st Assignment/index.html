@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Assignment</title>
+</head>
+
+<body>
+    <!-- Start First Table -->
+    <table style="background-color: #a32b2d; ">
+        <caption style="background-color: #437aa9; ">Personal Data</caption>
+        <!-- Start 2nd Table -->
+        <tr>
+            <td colspan="3">
+                <table style=" background-color: #d9a51e;">
+                    <caption style="background-color: #6496ec;">YourName</caption>
+                    <!-- First Name -->
+                    <tr>
+                        <td>
+                            <label for=" fName">first name</label>
+                        </td>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="text" id="fName" name="fName" placeholder="ex ahmed">
+                        </td>
+                    </tr>
+                    <!-- 2nd Name -->
+                    <tr>
+                        <td>
+                            <label for="sName">second name</label>
+                        </td>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="text" id="sName" name="sName" placeholder="ex bahnasy">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        </tr>
+        <!-- End 2nd table -->
+
+
+
+
+        <!-- Phone -->
+        <tr>
+            <td>
+                <label for="num">your phone</label>
+            </td>
+            <td>
+                :
+            </td>
+            <td>
+                <input id="num" name="num" type="number">
+            </td>
+        </tr>
+
+
+
+        <!-- Email -->
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>
+                :
+            </td>
+            <td>
+                <input id="email" name="email" type="tel">
+            </td>
+        </tr>
+
+
+
+        <!-- Password -->
+        <tr>
+            <td>
+                <label for="password">password</label>
+            </td>
+            <td>
+                :
+            </td>
+            <td>
+                <input id="password" name="password" type="password">
+            </td>
+        </tr>
+
+
+
+        <!-- Re-Password -->
+        <tr>
+            <td>
+                <label for="rePassword">re-password</label>
+            </td>
+            <td>
+                :
+            </td>
+            <td>
+                <input id="rePassword" name="rePassword" type="password">
+            </td>
+        </tr>
+
+
+
+
+
+        <!-- Gender -->
+        <tr>
+            <td>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">male</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">female</label>
+            </td>
+        </tr>
+
+
+
+
+
+        <!-- Graduation Status -->
+        <tr>
+            <td>
+                <input type="checkbox" name="gender" id="student" value="Student">
+                <label for="student">Student</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="checkbox" name="gender" id="graduated" value="Graduated">
+                <label for="graduated">Graduated</label>
+            </td>
+        </tr>
+
+
+
+
+
+        <!-- University -->
+        <tr>
+            <td>
+                <select name="University" id="University">
+
+                    <optgroup label="Private University">
+                        <option value="AUC">AUC</option>
+                        <option value="GUC">GUC</option>
+                    <optgroup label="Public University">
+                        <option value="Cairo">Cairo</option>
+                        <option value="Helwan">Helwan</option>
+                        <option value="Alexandria">Alexandria</option>
+                    <optgroup disabled label="National University">
+                        <option disabled value="Alamein">Al Alamein International University</option>
+                        <option disabled value="Galala">Galala University</option>
+                    </optgroup>
+
+                </select>
+            </td>
+        </tr>
+        <!-- Submit Button -->
+
+        <tr>
+            <td>
+                <button type="submit">SUBMIT</button>
+            <td>
+        </tr>
+    </table>
+    <!-- End First Table -->
+</body>
+
+</html>
