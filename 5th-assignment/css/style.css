@@ -1,0 +1,170 @@
+/* Start vars */
+:root {
+    /* Fonts */
+    --font-default: "Open Sans", sans-serif;
+    --font-primary: "Amatic SC", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+
+    /* Colors */
+    /* Light Mode */
+    --font-main-color: #212529;
+    --main-color: #ce1212;
+    --hover-color: #e61414;
+    --main-background: #fff;
+
+    /* Dark Mode */
+}
+
+/* Start General Styles */
+/* General Styles For Tags */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--font-color);
+}
+img {
+    width: 100%;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+section {
+    padding-block: 4rem;
+}
+
+/* General Styles For classes */
+.clear-fix {
+    clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin-inline: auto;
+}
+.active {
+    /* color: var(--main-color) !important; */
+}
+
+/* Start Header  */
+
+.header {
+    background-color: var(--main-background);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 20px 0;
+    width: 100vw;
+
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
+
+    z-index: 999;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__nav-list {
+    display: none;
+}
+
+.header .header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--font-main-color);
+    font-family: var(--font-default);
+}
+
+.header .header__logo-dot {
+    color: var(--main-color);
+    font-size: 35px;
+}
+
+.header .header__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .header__icons i {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* Start Hero section */
+
+.hero {
+    padding-top: 90px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .hero__image {
+    box-shadow: rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(4px 4px 9px #000a);
+    margin: 2.4rem 0;
+}
+
+.hero .hero__content h1 {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    color: #37373f;
+}
+
+.hero .hero__content p {
+    color: #37373f;
+    margin-block: 1rem;
+    line-height: 1.8rem;
+}
+
+.hero .hero__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero .hero__btn-main {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0.7rem 1.8rem;
+    border-radius: 5rem;
+}
+
+.hero .hero__btn-secondary {
+    background-color: transparent;
+    color: #37373f;
+    border-radius: 2rem;
+}
+
+.hero .hero__btn-secondary .fa-play {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+
+    top: 0;
+    left: 0;
+}
