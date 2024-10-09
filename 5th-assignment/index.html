@@ -19,22 +19,34 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d2d94ce7e5.js" crossorigin="anonymous"></script>
 
-    <!-- Main Style Sheet -->
+    <!-- Main Style Sheet => Mobile First -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive Sheet => other Screen Media Queries -->
+    <link rel="stylesheet" href="css/responsive-sheet.css">
 </head>
 
 <body>
 
+
+
     <!-- ----------------------------------------------------------------------- -->
     <!--                             This is Header                              -->
     <!-- ----------------------------------------------------------------------- -->
+
     <header class="header">
+        <div id="shadow" class="shadow"></div>
         <div class="container">
             <a class="header__logo" href="index.html">
                 Mealify<span class="header__logo-dot">.</span>
             </a>
             <nav>
-                <ul class="header__nav-list">
+
+
+                <ul id="nav" class="header__nav-list ">
+                    <li class="header__menu-close-button-icon">
+                        <i id="close" class="fa-solid fa-x " aria-label="close navbar menu"></i>
+                    </li>
                     <li class="header__nav-item">
                         <a class="header__nav-link active" href="#hero">Home</a>
                     </li>
@@ -50,10 +62,10 @@
                 </ul>
             </nav>
             <div class="header__icons">
-                <i class="fa-solid fa-moon"></i>
-                <!-- <i class="fa-regular fa-sun"></i> -->
-                <i class="fa-solid fa-bars header__menu"></i>
-                <!-- <i class="fa-solid fa-x header__x"></i> -->
+                <i id="dark" class="fa-solid fa-moon" aria-label="switch to dark mode"></i>
+                <i id="light" class="fa-regular fa-sun" aria-label="switch to light mode"></i>
+                <i id="open" class="fa-solid fa-bars header__menu" aria-label="open nav bar menu"></i>
+
             </div>
 
         </div>
@@ -78,11 +90,19 @@
                     quaerat.
                 </p>
                 <div class="hero__btns">
-                    <a href="#" class="hero__btn-main">Book a Table</a>
-                    <a href="#" class="hero__btn-secondary">
-                        <i class="fa-solid fa-play"></i>
-                        Watch a Video
+
+                    <a href="#" class="hero__btn-main main-btn">
+                        Book a Table
                     </a>
+
+                    <a href="#" class="hero__btn-secondary">
+                        <span class="play-effect">
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+                        Watch a Video
+
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -91,27 +111,31 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                              This is Chefs                              -->
     <!-- ----------------------------------------------------------------------- -->
-    <section class="chefs">
+    <section id="chefs" class="chefs">
         <div class="container">
             <h3 class="section-mini-title">Chefs</h3>
             <h2 class="section-title">
                 Our
-                <span class="title-color-word">Professional</span>
+                <span class="section-title-colored">Professional</span>
                 Chefs
             </h2>
             <div class="chefs__cards">
                 <div class="chef__card">
-                    <img class="chef__img" src="images/chef-1.jpg" alt="Chef 1">
-                    <h4 class="chef__name">
-                        Walter White
-                    </h4>
-                    <h5 class="chef__title">
-                        Master Chef
-                    </h5>
-                    <p class="chef__info">
-                        Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                        exercitationem iure minima enim corporis et voluptate.
-                    </p>
+                    <div class="chef__img-container">
+                        <img class="chef__img" src="images/chefs/chefs-1.jpg" alt="Chef 1">
+                    </div>
+                    <div class="chef__content">
+                        <h4 class="chef__name">
+                            Walter White
+                        </h4>
+                        <h5 class="chef__title">
+                            Master Chef
+                        </h5>
+                        <p class="chef__info">
+                            Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                            exercitationem iure minima enim corporis et voluptate.
+                        </p>
+                    </div>
                     <div class="chef__social">
                         <a href="#" class="chef__social-link">
                             <i class="fa-brands fa-twitter"></i>
@@ -128,17 +152,24 @@
                     </div>
                 </div>
                 <div class="chef__card">
-                    <img class="chef__img" src="images/chef-2.jpg" alt="Chef 2">
-                    <h4 class="chef__name">
-                        Sarah Jhonson
-                    </h4>
-                    <h5 class="chef__title">
-                        Patissier
-                    </h5>
-                    <p class="chef__info">
-                        Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit
-                        corporis. Voluptate sed quas reiciendis animi neque sapiente.
-                    </p>
+
+                    <div class="chef__img-container">
+                        <img class="chef__img" src="images/chefs/chefs-2.jpg" alt="Chef 2">
+                    </div>
+                    <div class="chef__content">
+
+                        <h4 class="chef__name">
+                            Sarah Jhonson
+                        </h4>
+                        <h5 class="chef__title">
+                            Patissier
+                        </h5>
+                        <p class="chef__info">
+                            Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit
+                            corporis. Voluptate sed quas reiciendis animi neque sapiente.
+                        </p>
+                    </div>
+
                     <div class="chef__social">
                         <a href="#" class="chef__social-link">
                             <i class="fa-brands fa-twitter"></i>
@@ -154,18 +185,27 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="chef__card">
-                    <img class="chef__img" src="images/chef-3.jpg" alt="Chef 3">
-                    <h4 class="chef__name">
-                        William Anderson
-                    </h4>
-                    <h5 class="chef__title">
-                        Cook
-                    </h5>
-                    <p class="chef__info">
-                        Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim
-                        aut architecto porro aspernatur molestiae modi.
-                    </p>
+                    <div class="chef__img-container">
+                        <img class="chef__img" src="images/chefs/chefs-3.jpg" alt="Chef 3">
+                    </div>
+
+                    <div class="chef__content">
+
+                        <h4 class="chef__name">
+                            William Anderson
+                        </h4>
+                        <h5 class="chef__title">
+                            Cook
+                        </h5>
+                        <p class="chef__info">
+                            Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates
+                            enim
+                            aut architecto porro aspernatur molestiae modi.
+                        </p>
+                    </div>
+
                     <div class="chef__social">
                         <a href="#" class="chef__social-link">
                             <i class="fa-brands fa-twitter"></i>
@@ -182,9 +222,308 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             This is Gallery                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h3 class="section-mini-title">Gallery</h3>
+            <h2 class="section-title">
+                Check
+                <span class="section-title-colored">
+                    Our Gallery
+                </span>
+
+            </h2>
+            <div class="gallery__cards pizza">
+                <div class="gallery__card">
+                    <img src="images/gallery/meal-1.jpg " alt="Gallery 1">
+                    <div class="gallery__card-overlay">
+                        <h4 class="gallery__card-title">
+                            Pizza
+                        </h4>
+                        <p class="gallery__card-info">
+                            Hawaiian pizza with ham and pineapple
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery__card burger">
+                    <img src="images/gallery/meal-3.jpg " alt="Gallery 2">
+                    <div class="gallery__card-overlay">
+                        <h4 class="gallery__card-title">
+                            Burger
+                        </h4>
+                        <p class="gallery__card-info">
+
+                            grass fed bison hamburger with chips &amp; beer
+
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery__card levitation">
+                    <img src="images/gallery/meal-4.jpg" alt="Gallery 3">
+                    <div class="gallery__card-overlay">
+                        <h4 class="gallery__card-title">
+                            Levitation pizza
+                        </h4>
+                        <p class="gallery__card-info">
+                            Levitation pizza on black background.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery__card frittata">
+                    <img src="images/gallery/meal-7.jpg" alt="Gallery 4">
+                    <div class="gallery__card-overlay">
+                        <h4 class="gallery__card-title">
+                            Frittata
+                        </h4>
+                        <p class="gallery__card-info">
+                            Frittata or potato pie in a ceramic plate
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery__card beef">
+                    <img src="images/gallery/meal-2.jpg" alt="Gallery 4">
+                    <div class="gallery__card-overlay">
+                        <h4 class="gallery__card-title">
+                            Beef steaks
+                        </h4>
+                        <p class="gallery__card-info">
+                            Tasty beef steaks flying above cast iron grate with fire flames.
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery__card crispy">
+                    <img src="images/gallery/meal-5.jpg" alt="Gallery 4">
+
+                    <div class="gallery__card-overlay ">
+                        <h4 class="gallery__card-title">
+                            Crispy Fried Chicken
+
+                        </h4>
+                        <p class="gallery__card-info">
+                            Golden brown chicken legs with a crunchy coating and juicy meat
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery__card kebab">
+                    <img src="images/gallery/meal-6.jpg" alt="Gallery 4">
+
+                    <div class="gallery__card-overlay">
+                        <h4 class="gallery__card-title">
+                            Lyulya kebab
+                        </h4>
+                        <p class="gallery__card-info">
+                            Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and herbs
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             This is Contact                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3 class="section-mini-title">Contact</h3>
+            <h2 class="section-title">
+                Need Help ?
+                <span class="section-title-colored">
+                    Contact Us
+                </span>
+            </h2>
+
+            <div class="contact__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.445785295115!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1681863129691!5m2!1sen!2sus"
+                    style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <div class="contact__cards">
+                <div class="contact__card">
+                    <i class="contact__icon fa-regular fa-map"></i>
+                    <div class="contact__card-content">
+                        <h4 class="card__card-header">
+                            Our Address
+                        </h4>
+                        <p class="contact__card-info">
+                            A108 Adam Street, New York, NY 535022
+                        </p>
+                    </div>
+                </div>
+                <div class="contact__card">
+                    <i class="contact__icon fa-regular fa-envelope"></i>
+                    <div class="contact__card-content">
+                        <h4 class="card__card-header">
+                            Email Us
+                        </h4>
+                        <p class="contact__card-info">
+                            contact@example.com
+                        </p>
+                    </div>
+                </div>
+                <div class="contact__card">
+                    <i class="contact__icon fa-solid fa-phone"></i>
+                    <div class="contact__card-content">
+                        <h4 class="card__card-header">
+                            Call Us
+                        </h4>
+                        <p class="contact__card-info">
+                            +1 5589 55488 55
+                        </p>
+                    </div>
+                </div>
+                <div class="contact__card">
+                    <i class="contact__icon fa-solid fa-share-nodes"></i>
+                    <div class="contact__card-content">
+                        <h4 class="card__card-header">
+                            Opening Hours
+                        </h4>
+                        <p class="contact__card-info">
+                            <span class="bold">Mon-Sat:</span> 11AM - 23PM; <span class="bold">Sunday:</span> Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact__form" action="#" method="post">
+
+                <div class="contact__one-line">
+                    <input placeholder="Your Name" type="text" class="form-control" id="name" name="name" required>
+
+                    <input placeholder="Your Email" type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <input placeholder="Subject" type="text" class="form-control" id="subject" name="subject" required>
+
+                <textarea placeholder="Message" name="message" id="message" required></textarea>
+
+                <button class="main-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             This is Footer                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__logo-section">
+                <div class="footer__logo">
+                    <img src="images/favicon.png" alt="">
+                    <a class="footer__logo" href="index.html">
+                        Mealify<span class="footer__logo-dot">.</span>
+                    </a>
+
+                </div>
+                <p class="footer__after-logo">
+                    Mealify is a restaurant landing page that offers a delicious dining experience to its customers.
+                </p>
+            </div>
+            <div class="footer__social-media">
+                <h4 class="footer__title footer__social-title">
+                    Social Media
+                </h4>
+                <ul class="footer__social-media-list">
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer__newsletter">
+                <h4 class="footer__title footer__newsletter">
+                    Subscribe our Newsletter
+                </h4>
+                <p class="footer__newsletter-info">
+                    Don't miss out on our latest menu updates and exclusive offers - join our newsletter today and stay
+                    up-to-date with all things Mealify!
+                </p>
+                <form action="#" method="post">
+                    <input type="email" class="form-control" id="newsletter-email" name="newsletter-email"
+                        placeholder="Enter Your Email Address" required>
+                    <button type="submit">
+                        <i class="fa-solid fa-envelope"></i>
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+            <div class="footer__quick-links">
+                <h4 class="footer__title footer__quick-links-title">
+                    Quick Links
+                </h4>
+                <ul class="footer__quick-link-list">
+                    <div class="quick-list-column">
+                        <li class="footer__quick-link">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Menu
+                        </li>
+                        <li class="footer__quick-link">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            About Us
+                        </li>
+                        <li class="footer__quick-link">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Testimonial
+                        </li>
+                    </div>
+                    <div class="quick-list-column">
+                        <li class="footer__quick-link">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Promo
+                        </li>
+                        <li class="footer__quick-link">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Contact
+                        </li>
+                        <li class="footer__quick-link">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            Our Partners
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer__get-in-touch">
+                <h4 class="footer__title footer__get-in-touch-title">
+                    Get In Touch
+                </h4>
+                <div class="footer__get-in-touch-content">
+                    <p class="footer__get-in-touch-info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        A108 Adam Street, New York, NY 535022
+                    </p>
+                    <p class="footer__get-in-touch-info">
+                        <i class="fa-solid fa-envelope"></i>
+                        contact@example.com
+                    </p>
+                    <p class="footer__get-in-touch-info">
+                        <i class="fa-solid fa-phone"></i>
+                        +1 5589 55488 55
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

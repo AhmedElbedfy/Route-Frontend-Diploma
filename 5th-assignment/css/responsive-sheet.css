@@ -1,0 +1,198 @@
+@media (min-width: 640px) {
+    /* hero Section */
+    .hero .hero__btns {
+        flex-direction: unset;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+
+    /* Header */
+    .header .header__nav-list {
+        width: 30vw;
+    }
+
+    /* hero Section */
+    .hero .hero__btns {
+        flex-direction: unset;
+    }
+
+    /* Footer Section */
+    .footer .footer__newsletter form {
+        flex-direction: row;
+    }
+
+    .footer .footer__newsletter input {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 90%;
+        max-width: 1150px;
+    }
+
+    /* Header & Navbar */
+
+    .header .header__nav-list {
+        position: static;
+
+        height: unset;
+        width: unset;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0;
+
+        opacity: 1;
+    }
+    .header .header__menu-close-button-icon {
+        display: none;
+    }
+
+    /* Hero Section */
+
+    .hero {
+        padding: 0;
+    }
+
+    .hero .container {
+        padding-top: 0;
+        height: 100vh;
+        flex-direction: row-reverse;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .hero .hero__image {
+        margin-top: 8rem;
+        width: 45%;
+    }
+
+    .hero .hero__content {
+        text-align: start;
+    }
+
+    .hero .hero__content h1,
+    .hero .hero__content p {
+        margin: 1rem 0;
+    }
+
+    .hero .hero__content p {
+        width: 60%;
+    }
+
+    .hero .hero__btns {
+        justify-content: start;
+    }
+
+    .hero .hero__btn-main {
+        border-top-left-radius: 0;
+    }
+
+    /* chefs */
+    .chefs .chef__card {
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    .chefs .chefs__cards {
+        flex-direction: row;
+    }
+
+    .header .header__menu {
+        display: none;
+    }
+
+    /* Gallery  */
+    .gallery .gallery__cards {
+        gap: 0.3rem;
+        grid-template-areas:
+            "pizza beef burger"
+            "pizza beef burger"
+            "pizza beef burger"
+            "levitation beef crispy"
+            "levitation beef crispy"
+            "levitation beef crispy"
+            "levitation beef kebab"
+            "levitation frittata kebab"
+            "levitation frittata kebab"
+            ". frittata kebab"
+            ". frittata .";
+    }
+
+    .gallery .gallery__card {
+        height: 100%;
+    }
+
+    .gallery .gallery__card img {
+        height: 100%;
+    }
+
+    .pizza {
+        grid-area: pizza;
+    }
+    .burger {
+        grid-area: burger;
+    }
+
+    .levitation {
+        grid-area: levitation;
+    }
+
+    .frittata {
+        grid-area: frittata;
+    }
+
+    .beef {
+        grid-area: beef;
+    }
+
+    .crispy {
+        grid-area: crispy;
+    }
+
+    .kebab {
+        grid-area: kebab;
+    }
+
+    /* contact us */
+    .contact .contact__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* Footer */
+    .footer .container {
+        display: grid;
+
+        gap: 1rem;
+
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .footer .footer__social-media {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .footer .footer__quick-links {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
