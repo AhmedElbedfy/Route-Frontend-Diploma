@@ -1,0 +1,191 @@
+@media (max-width: 990px) {
+    /* This is Tha Main layout */
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "section-2 section-2"
+            "section-1 section-1"
+            "section-3 section-6"
+            "section-4 section-4"
+            "section-8 section-5"
+            "section-7 section-5"
+            "section-9 section-9"
+            "section-0 section-0";
+    }
+
+    /* This is Section1 Styles */
+
+    .section-1 {
+        padding-top: 2rem;
+    }
+
+    .section-1 .section-text {
+        width: fit-content;
+    }
+
+    /* This is Section-2 Styles */
+
+    .section-2 {
+        padding: 3rem;
+    }
+
+    .section-2 .section-title {
+        max-width: 500px;
+        font-size: 32px;
+    }
+
+    /* This is Section-5 Styles */
+
+    .section-5 .text {
+        width: 85%;
+        max-width: 350px;
+    }
+
+    /* This is Section-7 Styles */
+
+    .section-7 {
+        padding-top: 8rem;
+        justify-content: space-between;
+    }
+
+    .section-7 .img-container {
+        transform: translateX(-50px);
+    }
+
+    /* This is Section-9 Styles */
+    .section-9 {
+        justify-content: center;
+
+        padding: 2.6rem;
+    }
+
+    .section-9 .section-title {
+        max-width: fit-content;
+    }
+}
+
+@media (max-width: 640px) {
+    /* This is Tha Main layout */
+    main {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "section-2"
+            "section-1"
+            "section-3"
+            "section-6"
+            "section-4"
+            "section-8"
+            "section-7"
+            "section-5"
+            "section-9"
+            "section-0";
+    }
+
+    /* This is Section1 Styles */
+
+    .section-1 {
+        flex-direction: column;
+        padding: 2.6rem 1rem 0;
+    }
+
+    .section-1 .content {
+        width: unset;
+    }
+
+    .section-1 .img {
+        margin-top: 2rem;
+        align-self: center;
+        width: 60%;
+    }
+
+    .section-1 .section-text {
+        width: fit-content;
+    }
+
+    /* This is Section-2 Styles */
+
+    .section-2 {
+        padding: 3rem 0;
+    }
+
+    .section-2 .section-title {
+        max-width: 95%;
+        font-size: 42px;
+    }
+
+    /* This is section-4 */
+    .section-4 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 1rem;
+    }
+
+    .section-4 .left,
+    .section-4 .right {
+        width: unset;
+        margin: 0;
+    }
+
+    .section-4 .section-title {
+        max-width: 100%;
+    }
+
+    .section-4 .img-container {
+        margin-block: 2rem;
+        width: 200%;
+        transform: translateX(-32%);
+    }
+
+    .section-4 .right {
+        flex-direction: column;
+    }
+
+    .section-4 .section-text {
+        max-width: unset;
+    }
+
+    /* This is section-6 Styles */
+    .section-6 {
+        padding-block: 3rem;
+    }
+
+    /* This is section-9 Styles */
+    .section-9 .section-title {
+        max-width: 95%;
+    }
+
+    /* This is section-10 Styles */
+    .section-0 {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2rem;
+        gap: 0;
+    }
+
+    .section-0 .img-container {
+        transform: translateX(-80px);
+    }
+
+    .section-0 .section-title {
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .section-2 .section-title {
+        font-size: 32px;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    .section-2 .section-title {
+        font-size: 28px;
+        max-width: 80%;
+        line-height: 2.5rem;
+    }
+}

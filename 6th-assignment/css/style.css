@@ -1,0 +1,472 @@
+/* Start vars */
+:root {
+    --font-family-open-sans: "Open Sans", sans-serif;
+    --font-family-montserrat: "Montserrat", sans-serif;
+    --font-family-arvo: "Arvo", serif;
+
+    /* colors */
+    --side-font-color: #9fa3a7;
+    --cta-font-color: #27b9c2;
+}
+
+/* Start General Styles */
+/* General Styles For Tags */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family-open-sans);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-block: 1rem;
+}
+
+/* This is Classes General Styles */
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-title {
+    font-family: var(--font-family-montserrat);
+    color: var(--side-font-color);
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: var(--font-family-arvo);
+    color: #333;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    max-width: 300px;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.section-text {
+    font-family: var(--font-family-open-sans);
+    color: var(--side-font-color);
+    font-size: 14px;
+    max-width: 320px;
+    line-height: 1.7rem;
+
+    /* font-weight: 700; */
+}
+
+.arrow-btn {
+    font-family: var(--font-family-montserrat);
+    color: #ffc80a;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.arrow-btn b {
+    font-size: 1rem;
+}
+
+.tag {
+    background-color: #7bc424;
+    color: #fff;
+    padding-inline: 10px;
+    border-radius: 5px;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* This is Tha Main layout */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 460px) 230px;
+    grid-template-areas:
+        "section-1 section-1 section-2 section-2"
+        "section-3 section-4 section-4 section-5"
+        "section-6 section-7 section-7 section-5"
+        "section-8 section-9 section-0 section-0";
+}
+
+.section-1 {
+    grid-area: section-1;
+}
+.section-2 {
+    grid-area: section-2;
+}
+.section-3 {
+    grid-area: section-3;
+}
+.section-4 {
+    grid-area: section-4;
+}
+.section-5 {
+    grid-area: section-5;
+}
+.section-6 {
+    grid-area: section-6;
+}
+.section-7 {
+    grid-area: section-7;
+}
+.section-8 {
+    grid-area: section-8;
+}
+.section-9 {
+    grid-area: section-9;
+}
+.section-0 {
+    grid-area: section-0;
+}
+
+/* This is Section-1 Styles */
+.section-1 {
+    padding: 0 13% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: end;
+}
+
+.section-1 .content {
+    width: 40%;
+}
+
+.section-1 .img {
+    align-self: end;
+    width: 35%;
+}
+
+/* This is Section-2 Styles */
+.section-2 {
+    background-color: #f7f8f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.section-2 h2 {
+    max-width: 550px;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.section-2 a {
+    color: var(--cta-font-color);
+    text-decoration: underline;
+}
+
+/* This is Section-3 Styles */
+.section-3 {
+    background-color: #f05638;
+    color: #fffbfb;
+
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3 .section-title {
+    max-width: 230px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* This is Section-4 Styles */
+
+.section-4 {
+    display: flex;
+}
+
+.section-4 .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.section-4 .section-title {
+    max-width: 200px;
+}
+
+.section-4 .img-container {
+    transform: translateX(-37%);
+}
+
+.section-4 .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.section-4 .arrow-btn {
+    color: #27b9c6;
+}
+
+/* This is Section-5 Styles */
+
+.section-5 {
+    background: #8f76bc;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 2rem;
+}
+
+.section-5 .container {
+    background-color: #8166b0;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    width: 100%;
+    padding: 2rem;
+
+    width: 400px;
+    height: 400px;
+}
+
+.section-5 .meet {
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    font-family: var(--font-family-montserrat);
+}
+
+.section-5 .tag {
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.078);
+    margin-bottom: 2rem;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.section-5 .flag {
+    width: 10px;
+}
+
+.section-5 .container .img {
+    /* padding: 2rem; */
+    width: 260px;
+}
+
+.section-5 .section-title {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.section-5 .text {
+    width: 80%;
+    max-width: 320px;
+}
+
+.section-5 .button {
+    background-color: #ffc80a;
+    color: #000;
+    text-transform: uppercase;
+    font-family: var(--font-family-open-sans);
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+
+/* This is Section-6 Styles */
+.section-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f7f8f9;
+}
+
+.section-6 .img-container {
+    max-width: 250px;
+    transform: translateX(-30px);
+}
+
+.section-6 h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.section-6 .arrow-btn {
+    color: var(--cta-font-color);
+}
+
+/* This is Section-7 Styles */
+
+.section-7 {
+    color: #fff;
+    background-color: #93b6b7;
+    background-image: url("../images/ux.png");
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 1.4rem;
+
+    text-align: center;
+}
+
+.section-7 .tag {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    background-color: #fa684f;
+}
+
+.section-7 .img-container {
+    width: 93%;
+    margin: 0 auto;
+    transform: translateX(-80px);
+}
+
+.section-7 .section-title {
+    color: #fff;
+}
+
+/* This is Section-8 Styles */
+.section-8 {
+    background-color: #38d5f4;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-8 .container {
+    background: #35cfed;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-8 .img-container {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-8 .section-title {
+    width: 150px;
+    color: #fff;
+}
+
+/* This is Section-9 Styles */
+
+.section-9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-block: 4rem;
+    text-align: center;
+    gap: 14px;
+    background-color: #f7f8f9;
+}
+
+/* This is Section-0 Styles */
+
+.section-0 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20%;
+
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.section-0 .img-container {
+    width: 300px;
+}
+
+.section-0 .section-title {
+    max-width: 280px;
+    color: #fff;
+}
