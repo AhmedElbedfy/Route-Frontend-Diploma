@@ -117,9 +117,25 @@ const quotes = [
     }
 ];
 
+let prevRandomNumber = -1;
+
+function generateRandomNumber(range) {
+    return Math.floor(Math.random() * range);
+}
 
 function displayQuote() {
-    randomNumber = Math.floor(Math.random() * quotes.length);
+    // Get Random Number
+    let randomNumber = generateRandomNumber(quotes.length);
+
+    // Check if the generated number is the same as the previous one, if so generate a new one until it's different
+    while (prevRandomNumber == randomNumber) {
+        randomNumber = generateRandomNumber(quotes.length);
+    }
+
+    // assign the previous number to the current one to check for the next quote
+    prevRandomNumber = randomNumber;
+
+    // update UI
     quote.textContent = quotes[randomNumber].quote;
     author.textContent = quotes[randomNumber].author;
 }
