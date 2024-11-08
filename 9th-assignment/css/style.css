@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "impact";
+    src: url("fonts/impact.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 5rem;
+    font-family: Impact, "Arial Narrow Bold", sans-serif;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 2.1rem;
+}
+
+button {
+    color: #f3f3e0;
+    background-color: #0000ff;
+    padding: 2rem 6.4rem;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #008000;
+    padding: 2rem 6.4rem;
+    margin-bottom: 1rem;
+}
+
+#quote-container,
+#author-container {
+    margin: 1rem;
+    font-size: 2.1rem;
+    text-align: center;
+}

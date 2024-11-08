@@ -1,0 +1,86 @@
+body {
+    background-color: #f5f5f5;
+    font-family: "Roboto", sans-serif;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    margin-top: 0.4rem;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 60%;
+    background: #0078ff;
+    transition: all 0.3s ease-out;
+}
+
+.navbar {
+    z-index: 9999;
+}
+
+.navbar-nav a.nav-link {
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+.navbar-nav a.nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.navbar-nav a.nav-link:hover::before {
+    width: 60%;
+}
+
+.navbar-nav a.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 60%;
+    background: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-position: center center;
+    background-size: contain;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-size: 4.4rem;
+}
+
+.counters {
+    background: url("../images/counters-bg.jpg");
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.testimonials {
+    background: url("../images/overlay-bg.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+}
